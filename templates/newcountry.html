@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+	<body>
+		<div align="center">
+	   <form action='/createcountrybyname'>
+		<h1>New Country</h1>
+		<div class='properties'>
+			<div>
+				<div>Country Name</div>
+				<div><input name='name' value="" type="text"></div>
+			</div>
+			<br>
+			<div>
+				<div>Capital</div>
+				<div><input name='capital' value="" type="text"></div>
+			</div>
+			<br>
+			<div>
+				<div>Continent</div>
+				<div><input name='continent' value="" type="text"></div>
+			</div>
+			<br>
+			<div>
+				<div>Area</div>
+				<div><input name='area' value="" type="text"></div>
+			</div>
+			<br>
+			<div>
+				<div>Population</div>
+				<div><input name='population' value="" type="text"></div>
+			</div>
+			<br>
+			<div>
+				<div>GDP (million $)</div>
+				<div><input name='gdp' value="" type="text"></div>
+			</div>
+			<br>
+			<div>
+				<div>TLD</div>
+				<div><input name='tld' value="" type="text"></div>
+			</div>
+		</div>
+		<br>
+		    <input type='submit' value="Submit">
+		<div class="button delete-button"> <a href='/delete/{{c.name}}'> Delete </a> </div>
+		<div class="button back-button"> <a href="/"> Back </a> </div>
+		</form>
+	</div>
+	</body>
+</html>

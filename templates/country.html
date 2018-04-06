@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+	<body>
+		<div align="center">
+		<h1>{{c['name']}}</h1>
+		<img src="/static/flags/{{c['tld']}}.gif" class='big'>
+		<br>
+		<div class='properties'>
+			<div>
+				<div>Capital</div>
+				<div>{{c['capital']}}</div>
+			</div>
+			<div>
+				<div>Continent</div>
+				<div><a href='../continent/{{c.continent}}'>{{c['continent']}}</a></div>
+			</div>
+			<div>
+				<div>Area</div>
+				<div>{{"{:,.0f}".format(c['area'])}}</div>
+			</div>
+			<div>
+				<div>Population</div>
+				<div>{{"{:,.0f}".format(c['population'])}}</div>
+			</div>
+			<div>
+				<div>GDP (million $)</div>
+				<div>{{"{:,.0f}".format(c['gdp']/1000000) }}</div>
+			</div>
+		</div>
+		<br>
+		<div class='button edit-button'>
+		<a href='/editcountryByName/{{c.name}}'>Edit</a>
+		</div>
+		<div class="button delete-button"> <a href='/delete/{{c.name}}'> Delete </a> </div>
+		<div class="button create-button"> <a href="/create"> Create </a> </div>
+		<div class="button back-button"> <a href="/"> Back </a> </div></div>
+	</body>
+</html>
