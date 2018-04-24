@@ -18,6 +18,10 @@ def mainPage():
                 length_of_w = len(w),
 		w = w[0:page_size],alpha = alpha)
 
+@app.route('/alphalist/')
+def alphaPage():
+	return render_template('alpha.html',alpha = alpha)
+
 @app.route('/begin/<b>')
 def beginPage(b):
 	bn = int(b)
