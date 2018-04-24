@@ -17,6 +17,17 @@
     <a href="/continent/North America">North America</a>
     <a href="/continent/South America">South America</a>
   </div>
+  		<br>
+  		<div><h1>Alpha list</h1></div>
+		<div class="topnav">
+			<div align="center">
+				<div>
+					{% for s in alpha %}
+					<a href="/StartwithAlphabetic/{{s}}">{{s}}</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
 		<ul>
 			{% for c in w %}
 			<li><a href='/countryByName/{{c.name}}'>
