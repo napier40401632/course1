@@ -4,23 +4,11 @@
 	<link rel='stylesheet' href='/static/style.css'>
 </head>
 	<body>
-<div align="center">
-		<div><h1>World Factbook</h1></div>
-		<div>There are {{length_of_w}} countries in the world.</div>
-		<img src='/static/photos/2.gif' width="100">
-			<div>
-    <a href="/continent/Asia">Asia</a>
-    <a href="/continent/Africa">Africa</a>
-    <a href="/continent/Caribbean">Caribbean</a>
-    <a href="/continent/Oceania">Oceania</a>
-    <a href="/continent/Europe">Europe</a>
-    <a href="/continent/North America">North America</a>
-    <a href="/continent/South America">South America</a>
-  </div>
-  		<br>
-  		{% extends "alpha.html" %}
+		{% extends "alpha.html" %}
   		{% block content %}
-		<ul>
+<div align="center">
+  		<br>
+		<ul class="clo">
 			{% for c in w %}
 			<li><a href='/countryByName/{{c.name}}'>
 				<img src='/static/flags/{{c["tld"]}}.gif' class='tiny'>
@@ -43,6 +31,7 @@
 		</div>
 		<div class="button create-button"> <a href="/create"> Create </a> </div>
 	</div>{% endblock %}
+</div>
 </div>
 </div>
 	</body>

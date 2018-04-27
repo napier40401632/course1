@@ -4,6 +4,12 @@
 	<link rel='stylesheet' href='/static/style.css'>
 </head>
 	<body>
+		<header id="header">
+  <div class="intro text-center">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="intro-text">
 		<div align="center">
 	   <form action='/updatecountrybyname'>
 		<h1>{{c['name']}}</h1>
@@ -36,7 +42,22 @@
 		<br>
 		    <input type='submit' value="Submit">
 		<div class="button delete-button"> <a href='/delete/{{c.name}}'> Delete </a> </div>
+		<div class="button back-button"> <a href="/">Home</a> </div>
 		</form>
+		<br>
+		 <button onclick="goBack()">Back</button>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script> 
 	</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</header>
 	</body>
 </html>

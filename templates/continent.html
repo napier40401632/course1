@@ -4,18 +4,38 @@
 	<link rel='stylesheet' href='/static/style.css'>
 </head>
 	<body>
+		<header id="header">
+  <div class="intro text-center">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="intro-text">
 		<div align="center">
 		<h1>{{a}}</h1>
 		<div>There are {{length_of_cl}} countries in {{a}}</div>
-		<ul>
+		<ul class="clo">
 			{% for c in cl %}
 			<li><a href='/countryByName/{{c.name}}'>
 				<img src='/static/flags/{{c.tld}}.gif' class='tiny'>
 			 {{c.name}}</a></li>
 			{% endfor %}
 		</ul>
-		<div class="button back-button"> <a href="/"> Back Menu </a> </div>
-		<div class="button back-button"> <a href="/alphalist/"> Back Alpha list </a> </div>
+		<div class="button back-button"> <a href="/"> Home </a> </div>
+		<br>
+		 <button onclick="goBack()">Back</button>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script> 
 	</div>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</header>
 	</body>
 </html>

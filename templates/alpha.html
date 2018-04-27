@@ -4,10 +4,20 @@
 	<link rel='stylesheet' href='/static/style.css'>
 </head>
 	<body>
-<div align="center"><h1>A - Z Countries' lists</h1></div>
+		<header id="header">
+  <div class="intro text-center">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="intro-text">
+<div align="center">
+	<div><h1>World Factbook</h1></div>
+		<div>There are {{length_of_w}} countries in the world.</div>
+		<br>
+		<img src='/static/photos/2.gif' width="100"><h1>A - Z Countries' lists</h1></div>
 				<div align="center">
 				<form>
-					<ul id="sort">
+					<ul id="sort" class="all">
 					{% for s in alpha %}
 					<a href="/StartwithAlphabetic/{{s}}"><li>{{s}}</li></a>
 					{% endfor %}
@@ -18,7 +28,13 @@
 				</div>
 			
 		<br>
-		<div class="button back-button"> <a href="/">Back Menu</a> </div>
+		<div class="button back-button"> <a href="/">Home</a> </div>
 		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</header>
 		</body>
 </html>

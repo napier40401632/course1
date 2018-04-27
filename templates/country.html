@@ -4,6 +4,12 @@
 	<link rel='stylesheet' href='/static/style.css'>
 </head>
 	<body>
+		<header id="header">
+  <div class="intro text-center">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="intro-text">
 		<div align="center">
 		<h1>{{c['name']}}</h1>
 		<img src="/static/flags/{{c['tld']}}.gif" class='big'>
@@ -15,7 +21,7 @@
 			</div>
 			<div>
 				<div>Continent</div>
-				<div><a href='../continent/{{c.continent}}'>{{c['continent']}}</a></div>
+				<div class="clo"><a href='../continent/{{c.continent}}'>{{c['continent']}}</a></div>
 			</div>
 			<div>
 				<div>Area</div>
@@ -36,6 +42,20 @@
 		</div>
 		<div class="button delete-button"> <a href='/delete/{{c.name}}'> Delete </a> </div>
 		<div class="button create-button"> <a href="/create"> Create </a> </div>
-		<div class="button back-button"> <a href="/"> Back Menu</a> </div></div>
+		<div class="button back-button"> <a href="/"> Home </a> </div></div>
+		<br>
+		 <button onclick="goBack()">Back</button>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script> 
+		</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 	</body>
 </html>
