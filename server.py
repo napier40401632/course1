@@ -12,6 +12,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def mainPage():
+	return render_template('index1.html')
+
+@app.route('/home/')
+def homePage():
 	return render_template('index.html',
 		page_number=0,
 		page_size=page_size,
@@ -20,7 +24,7 @@ def mainPage():
 
 @app.route('/alphalist/')
 def alphaPage():
-	return render_template('alpha.html',alpha = alpha)
+	return render_template('alpha.html',alpha = alpha,length_of_w = len(w))
 
 @app.route('/begin/<b>')
 def beginPage(b):
