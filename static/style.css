@@ -26,8 +26,17 @@ img.big {
 .properties div div:last-child{
 	font-weight: bold;
 }
-a{
+.clo a{
 	text-decoration: none;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.all a {
+    text-decoration: none;
     color: black;
 }
 .button {
@@ -103,4 +112,21 @@ ul#sort a:link{
 }
 ul#sort a:hover{
     background-color: white;
+}
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    background: url(/static/photos/world-flags.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.intro .overlay {
+    padding: 100px 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d96b4da8', endColorstr='#d94977c2', GradientType=1 ); /* IE6-9 */
 }
